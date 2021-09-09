@@ -128,4 +128,5 @@ class ContainerController(cement.Controller):
                 assert interactive
                 bz.containers.interact(c)
         finally:
-            del bz.containers[c.uid]
+            #del bz.containers[c.uid]
+            pass

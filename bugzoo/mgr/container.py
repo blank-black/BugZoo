@@ -339,7 +339,7 @@ class ContainerManager(object):
         Blocks until the user exits the PTY.
         """
         cmd = "/bin/bash -c 'source /.environment && /bin/bash'"
-        cmd = "docker exec -it {} {}".format(container.id, cmd)
+        cmd = "docker exec {} {}".format(container.id, cmd)
         subprocess.call(cmd, shell=True)
 
     def coverage_extractor(self, container: Container) -> CoverageExtractor:
